@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Remove text selection cursor from non-text elements */
+* {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Allow text selection only for input fields, textareas, and content areas */
+input, textarea, [contenteditable="true"], .selectable-text {
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+}
+
+/* Ensure proper cursor for interactive elements */
+button, a, [role="button"] {
+  cursor: pointer;
+}
+
+/* Default cursor for non-interactive elements */
+div, span, p, h1, h2, h3, h4, h5, h6 {
+  cursor: default;
+}
